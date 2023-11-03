@@ -12,7 +12,7 @@ export class FactureComponent implements OnInit {
 
   listFactures: any;
   form: boolean = false;
-  facture!: Facture;
+  facture!: any;
   closeResult!: string;
 
   constructor(private factureService: FactureService, private modalService: NgbModal) {
@@ -21,12 +21,10 @@ export class FactureComponent implements OnInit {
   ngOnInit(): void {
     this.getAllFactures();
     this.facture = {
-      idFacture:null,
-      dateCreationFacture:null,
-      montantFacture:null,
-      dateDerniereModificationFacture:null,
-      montantRemise:null,
-      archivee:null
+      idFournisseur:null,
+      code:null,
+      libelle:null,
+     
     }
   }
 
